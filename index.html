@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jyothi Swarup Abburi – Data Analytics Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Merriweather|Sacramento&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+      font-family: 'Merriweather', serif;
+      line-height: 1.8;
+      background-color: #bae1c8;
+      color: #135e5a;
+    }
+    h1 {
+      font-size: 5.625rem;
+      font-family: 'Sacramento', cursive;
+      margin: 50px auto 0 auto;
+      color: #66bfbf;
+      letter-spacing: 3px;
+      text-shadow: 1px 2px 7px #c3eedd;
+    }
+    h2 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      font-family: 'Montserrat', sans-serif;
+      color: #66bfbf;
+      font-weight: 700;
+      margin-bottom: 18px;
+      margin-top: 70px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #d8f0e1 15%, #e4f9f5 85%);
+      display: inline-block;
+      border-radius: 15px;
+      padding: 6px 30px;
+      box-shadow: 0 1px 8px rgba(102, 191, 191, 0.09);
+    }
+    h2 i {
+      margin-right: 10px;
+      color: #11999e;
+    }
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #11999e;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: 1.2px;
+    }
+    a {
+      color: #11999e;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: #166366;
+      text-decoration: underline;
+    }
+    .top-container {
+      background-color: #e4f9f5;
+      position: relative;
+      padding-top: 100px;
+      padding-bottom: 50px;
+      box-shadow: 0 2px 13px rgba(102, 191, 191, 0.15);
+    }
+    .middle-container {
+      margin-top: -50px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px 25px 60px 25px;
+    }
+    nav {
+      margin: 25px 0 40px 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.12rem;
+      background: rgba(216,240,225,0.7);
+      border-radius: 22px;
+      box-shadow: 0 2px 8px #e0f4e5;
+      padding: 10px 0;
+      display: inline-block;
+      width: 90%;
+      max-width: 700px;
+    }
+    nav a {
+      margin: 0 23px;
+      transition: color 0.2s, background 0.2s;
+      padding: 6px 10px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    nav a i {
+      margin-right: 5px;
+      color: #11999e;
+    }
+    nav a:hover, nav a:focus {
+      background: #bff3e0;
+      color: #166366;
+    }
+    .content-section {
+      background: linear-gradient(120deg, #fafcfa 80%, #e2f3e4 100%);
+      border-radius: 18px;
+      padding: 40px 40px 30px 40px;
+      margin-bottom: 45px;
+      box-shadow: 0 5px 30px rgba(120,200,180, 0.22), 0 1.5px 7px rgba(0,0,0,.06);
+      border-top: 6px solid #E4F9F5;
+      text-align: left;
+    }
+    .profile-text, .experience-text {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto 28px auto;
+      text-align: left;
+      font-size: 1.09rem;
+      line-height: 1.7;
+      color: #173b3a;
+    }
+    .image-me {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #99dab7;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 36px 0 #92ccb5, 0 0px 0.5px #bce0c7;
+      transition: transform 0.21s;
+      background: linear-gradient(90deg, #e3f9ed 30%, #bae1c8 100%);
+    }
+    .image-me:hover {
+      transform: scale(1.048) rotate(-3deg);
+      box-shadow: 0 18px 44px 0 #92ccb5, 0 0px 0.5px #bce0c7;
+    }
+    .skills-icons {
+      margin-bottom: 16px;
+    }
+    .skills-icons i {
+      font-size: 2rem;
+      margin: 0 8px 8px 8px;
+      color: #11999e;
+      background: #d8f0e1;
+      border-radius: 8px;
+      padding: 6px;
+      box-shadow: 0 1px 6px #d8f0e1;
+      transition: background 0.2s, color 0.2s;
+      vertical-align: middle;
+    }
+    .skills-icons i:hover {
+      background: #bff3e0;
+      color: #388883;
+    }
+    .stats-widget {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      margin-bottom: 30px;
+      margin-top: 5px;
+    }
+    .stat-card {
+      background: #e4f9f5;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px #b8ebce77;
+      padding: 25px 24px 16px 24px;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      min-width: 110px;
+    }
+    .stat-icon {
+      font-size: 2.3rem;
+      color: #66bfbf;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .stat-number {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #11999e;
+    }
+    .stat-label {
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: #196c67;
+    }
+    ul {
+      padding-left: 23px;
+      margin-top: 8px;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    .meta-info {
+      color: #0e847e;
+      font-style: italic;
+      font-size: 1.0rem;
+      margin-bottom: 12px;
+      display: block;
+      letter-spacing: .3px;
+    }
+    .contact-icons {
+      margin-top: 16px;
+    }
+    .contact-icons a {
+      margin: 0 11px;
+      font-size: 2.0rem;
+      color: #11999e;
+      display: inline-block;
+      vertical-align: middle;
+      transition: color 0.22s;
+    }
+    .contact-icons a:hover {
+      color: #166366;
+      transform: scale(1.09);
+    }
+    .contact-me {
+      font-size: 1.12rem;
+      margin-top: 45px;
+      margin-bottom: 80px;
+      background: #e9faef;
+      border-radius: 12px;
+      box-shadow: 0 0 3px #caddb5 inset;
+      padding: 26px 18px 0 18px;
+    }
+    .footer {
+      background-color: #66bfbf;
+      color: white;
+      padding: 20px 0;
+      font-size: 0.95rem;
+      letter-spacing: .3px;
+      margin-top: 22px;
+    }
+    .footer a {
+      color: #daf1f0;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+      color: #bee3db;
+    }
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+        padding: 4px 20px;
+      }
+      nav { font-size: 0.95rem; padding: 8px 0;}
+      .profile-text, .experience-text { padding: 0 10px; font-size: 0.98rem;}
+      .content-section { padding: 18px 5px; }
+      .image-me { width: 110px; height: 110px; }
+      .stats-widget { flex-direction: column; gap: 18px; }
+      .stat-card { min-width: 92px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="top-container">
+    <h1>Jyothi Swarup Abburi</h1>
+    <nav>
+      <a href="#about"><i class="fas fa-user"></i> About</a>
+      <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+      <a href="#skills"><i class="fas fa-laptop-code"></i> Skills</a>
+      <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+      <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+      <a href="#activities"><i class="fas fa-users"></i> Activities</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+  </div>
+
+  <div class="middle-container">
+    <section id="about" class="content-section">
+      <img src="Di.jpg" alt="Jyothi Swarup Abburi" class="image-me" />
+      <h2><i class="fas fa-user"></i> Professional Summary</h2>
+      <p class="profile-text">
+        Results-driven data analytics graduate student with a strong foundation in Electronics and Communication Engineering. Skilled at building machine learning, NLP, and analytics solutions to business challenges. Adept at translating complex data into actionable insights and delivering real-world value through analytical storytelling.
+      </p>
+    </section>
+
+    <section id="overview-stats" class="content-section" style="padding-bottom: 15px;">
+      <div class="stats-widget">
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fas fa-database"></i></span>
+          <span class="stat-number" id="projects-count">2</span>
+          <div class="stat-label">Major Projects</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fas fa-user-graduate"></i></span>
+          <span class="stat-number" id="gpa-count">3.35</span>
+          <div class="stat-label">Grad GPA</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fas fa-certificate"></i></span>
+          <span class="stat-number" id="cert-count">4</span>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fas fa-trophy"></i></span>
+          <span class="stat-number" id="comp-count">3</span>
+          <div class="stat-label">Competitions</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="content-section">
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+      <div class="profile-text">
+        <strong>New Mexico State University, Las Cruces, NM</strong><br />
+        Master of Science, Data Analytics (Expected May 2025) &nbsp;&nbsp;&nbsp; GPA: 3.35<br />
+        <b>Capstone Project:</b> Real-Time Movie Review Analysis Using Sentiment Classification and Clustering
+        <ul>
+          <li>Built a machine learning system operating on 10,000+ movie reviews with an 18% increase in sentiment accuracy.</li>
+          <li>Developed interactive dashboards with Python and Plotly Dash, allowing stakeholders to track sentiment trends.</li>
+        </ul>
+        <strong>Bharath University, Chennai, India</strong><br />
+        Bachelor of Technology, Electronics and Communication Engineering (June 2022) &nbsp;&nbsp;&nbsp; GPA: 8.9<br />
+        <b>Project:</b> Collision Avoiding Vehicle Using Arduino
+        <ul>
+          <li>Designed and programmed an autonomous vehicle with ultrasonic sensors, reducing collision risk by 95% in trials.</li>
+        </ul>
+        <strong>Sri Chaitanya Junior College, Ongole</strong> — XII, MPC, March 2018 &nbsp;&nbsp;&nbsp; GPA: 9.64<br />
+        <strong>Damodara Public School, Ongole</strong> — SSC, May 2016 &nbsp;&nbsp;&nbsp; GPA: 9.0
+      </div>
+    </section>
+
+    <section id="skills" class="content-section">
+      <h2><i class="fas fa-laptop-code"></i> Technical Skills</h2>
+      <div class="skills-icons">
+        <i class="fab fa-python" title="Python"></i>
+        <i class="fab fa-js-square" title="JavaScript"></i>
+        <i class="fas fa-database" title="SQL, Databases"></i>
+        <i class="fab fa-java" title="Java"></i>
+        <i class="fas fa-chart-bar" title="Analytics"></i>
+        <i class="fas fa-table" title="Excel"></i>
+        <i class="fas fa-cloud" title="Cloud"></i>
+        <i class="fas fa-tools" title="Tools"></i>
+      </div>
+      <div class="profile-text">
+        <p><strong>Programming Languages:</strong> Python (Pandas, NumPy, Scikit-learn), Java, SQL</p>
+        <p><strong>Data Analytics & ML:</strong> Machine Learning, NLP, Clustering, Data Cleaning, Feature Engineering, EDA</p>
+        <p><strong>Visualization:</strong> Tableau, Power BI, Matplotlib, Seaborn, Plotly</p>
+        <p><strong>Databases:</strong> MySQL, PostgreSQL</p>
+        <p><strong>Web/Software:</strong> HTML, CSS, JavaScript, Git, Jupyter, VS Code</p>
+        <p><strong>Cloud & ETL:</strong> AWS EC2 (beginner), Batch jobs, Data Pipeline Concepts</p>
+        <p><strong>Tools:</strong> Excel, Postman, Google Colab</p>
+        <p><strong>Soft Skills:</strong> Data Storytelling, Stakeholder Communication, Problem Solving, Agile Collaboration, Leadership</p>
+      </div>
+    </section>
+
+    <section id="experience" class="content-section">
+      <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+      <div class="profile-text experience-text">
+        <h3>Graduate Research Assistant <i class="fas fa-university" style="color:#23b07a;"></i></h3>
+        <div class="meta-info">New Mexico State University, Sep 2024 – Present</div>
+        <ul>
+          <li>Partner with interdisciplinary teams to deliver data analytics solutions, optimizing data pipelines saving 15% processing time.</li>
+          <li>Produce weekly reports and dashboards, increasing project reporting efficiency by 30%.</li>
+          <li>Support faculty with data cleaning and analysis; contributions included two research publications in progress.</li>
+        </ul>
+        <h3>Data Analytics Intern <i class="fas fa-laptop" style="color:#66bfbf;"></i></h3>
+        <div class="meta-info">Hypothetical Analytics Co., Remote, Jun 2024 – Aug 2024</div>
+        <ul>
+          <li>Automated reporting pipelines with Python and SQL, reducing manual work by 40%.</li>
+          <li>Built K-means customer segmentation models, improving targeted marketing campaign effectiveness by 15%.</li>
+          <li>Created Tableau dashboards for non-technical business users, enhancing data-driven decision-making.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="content-section">
+      <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+      <div class="profile-text">
+        <h3>Real-Time Movie Review Analytics Dashboard <i class="fas fa-comments"></i></h3>
+        <ul>
+          <li>Designed and implemented a complete ML pipeline for streaming review analysis with enhanced prediction F1-score (+17%).</li>
+          <li>Resulted in timely, actionable insights used by movie distributors to guide marketing strategies.</li>
+        </ul>
+        <h3>Wearable Device for Visually Impaired People <i class="fas fa-blind"></i></h3>
+        <ul>
+          <li>Developed a Python and sensor-based wearable device providing real-time audio feedback with 96% object detection accuracy.</li>
+          <li>Conducted usability trials with visually impaired volunteers, improving system reliability and user comfort.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="activities" class="content-section">
+      <h2><i class="fas fa-users"></i> Extracurricular & Community Engagement</h2>
+      <div class="profile-text">
+        <ul>
+          <li><i class="fas fa-futbol" style="color:#23b07a;"></i> Varsity cricket and volleyball; team leader two semesters. Chess and carroms participant.</li>
+          <li><i class="fas fa-hands-helping" style="color:#11999e;"></i> Active STEM outreach, animal welfare, AI/data science meetups.</li>
+          <li><i class="fas fa-hiking" style="color:#11999e;"></i> Enjoy hiking, backpacking, road trips.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section contact-me">
+      <h2><i class="fas fa-envelope"></i> Contact</h2>
+      <div class="profile-text">
+        <p><i class="fas fa-envelope"></i> <a href="mailto:swarupabburi0897@gmail.com">swarupabburi0897@gmail.com</a></p>
+        <div class="contact-icons">
+          <a href="mailto:swarupabburi0897@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/sankarswaroop-abburi-625a87222/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/swaroopsankar" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com/swarup_chowdary" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/accounts/onetap/?next=%2F&hl=en" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="tel:6363685657" title="Phone"><i class="fas fa-phone"></i></a>
+        </div>
+        <p><i class="fas fa-map-marker-alt"></i> Location: Mansfield, CT</p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    &copy; 2025 Jyothi Swarup Abburi &mdash; Built with custom CSS and resume-driven content
+  </footer>
+
+  <script>
+    function animateCounter(id, end, duration = 1500, decimals = 0) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      let start = 0,
+        range = end - start;
+      let increment = end > start ? 1 : -1;
+      let stepTime = Math.abs(Math.floor(duration / range));
+      let current = start;
+      const timer = setInterval(() => {
+        current += increment;
+        el.textContent = decimals ? current.toFixed(decimals) : current;
+        if (current >= end) clearInterval(timer);
+      }, stepTime);
+    }
+
+    // New decimal animation for GPA to avoid overshoot
+    function animateDecimalCounter(id, end, duration = 1500, decimals = 2) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      let start = 0;
+      const stepTime = 20;
+      const steps = Math.ceil(duration / stepTime);
+      let currentStep = 0;
+
+      const timer = setInterval(() => {
+        currentStep++;
+        let progress = currentStep / steps;
+        let currentValue = start + (end - start) * progress;
+        if (currentValue > end) currentValue = end;
+        el.textContent = currentValue.toFixed(decimals);
+        if (currentStep >= steps) clearInterval(timer);
+      }, stepTime);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      animateCounter('projects-count', 2, 1100);
+      animateDecimalCounter('gpa-count', 3.35, 1300, 2);
+      animateCounter('cert-count', 4, 1100);
+      animateCounter('comp-count', 3, 1200);
+    });
+  </script>
+</body>
+</html>
