@@ -431,7 +431,8 @@
             object-fit: cover;
             border: 4px solid var(--accent);
             box-shadow: 0 10px 30px rgba(17,153,158,0.3);
-            margin-bottom: 1rem;
+            margin: 0 auto 1rem;
+            display: block;
             transition: all 0.3s ease;
         }
 
@@ -540,6 +541,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            text-align: center;
         }
 
         .advanced-skill-card::before {
@@ -575,12 +577,14 @@
         .skill-card-content {
             position: relative;
             z-index: 2;
+            text-align: center;
         }
 
         .skill-icon {
             font-size: 3rem;
             color: var(--accent);
             margin-bottom: 1rem;
+            text-align: center;
             transition: all 0.4s ease;
         }
 
@@ -594,6 +598,7 @@
             color: var(--heading-main);
             font-weight: 700;
             margin-bottom: 1rem;
+            text-align: center;
         }
 
         .skill-description {
@@ -601,6 +606,7 @@
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
             line-height: 1.6;
+            text-align: center;
         }
 
         .skill-progress-container {
@@ -760,6 +766,7 @@
             flex-direction: column;
             position: relative;
             z-index: 2;
+            text-align: center;
         }
 
         .project-title {
@@ -768,6 +775,7 @@
             font-weight: 800;
             margin-bottom: 1rem;
             letter-spacing: 0.5px;
+            text-align: center;
         }
 
         .project-tech {
@@ -775,6 +783,7 @@
             gap: 0.7rem;
             margin-bottom: 1.5rem;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .tech-tag {
@@ -804,6 +813,7 @@
             font-size: 0.95rem;
             flex-grow: 1;
             margin-bottom: 1.5rem;
+            text-align: center;
         }
 
         .project-stats {
@@ -963,6 +973,7 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.2);
             transition: all 0.4s ease;
+            text-align: center;
         }
 
         .experience-card:hover {
@@ -988,6 +999,7 @@
         .experience-description {
             color: var(--text-main);
             line-height: 1.7;
+            text-align: center;
         }
 
         .education-grid {
@@ -1040,6 +1052,7 @@
         .education-content {
             position: relative;
             z-index: 2;
+            text-align: center;
         }
 
         .education-title {
@@ -1072,6 +1085,7 @@
             line-height: 1.8;
             margin-bottom: 1.5rem;
             flex-grow: 1;
+            text-align: center;
         }
 
         .education-gpa {
@@ -1092,7 +1106,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: center;
+            align-items: start;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
@@ -1138,6 +1152,7 @@
             font-size: 2rem;
             margin-bottom: 1.5rem;
             font-weight: 800;
+            text-align: center;
         }
 
         .activity-item {
@@ -1151,6 +1166,7 @@
             display: flex;
             align-items: center;
             gap: 1.5rem;
+            text-align: left;
         }
 
         .activity-item:hover {
@@ -1270,7 +1286,7 @@
             padding: 8rem 2rem;
             text-align: center;
             position: relative;
-            min-height: 800px;
+            min-height: 600px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1296,14 +1312,11 @@
         }
 
         .orbital-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
             width: 100%;
-            max-width: 1200px;
+            max-width: 800px;
             z-index: 5;
             position: relative;
+            text-align: center;
         }
 
         .orbital-container {
@@ -1311,39 +1324,6 @@
             width: 500px;
             height: 500px;
             margin: 0 auto;
-        }
-
-        .orbital-photo {
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-
-        .orbital-frame {
-            width: 280px;
-            height: 280px;
-            border-radius: 25px;
-            overflow: hidden;
-            border: 6px solid var(--accent);
-            box-shadow: 0 30px 80px rgba(17,153,158,0.4), inset 0 0 30px rgba(17,153,158,0.2);
-            transition: all 0.4s ease;
-            cursor: pointer;
-        }
-
-        .orbital-frame:hover {
-            transform: scale(1.08) rotate(-3deg);
-            box-shadow: 0 50px 120px rgba(17,153,158,0.6), inset 0 0 40px rgba(17,153,158,0.3);
-        }
-
-        .orbital-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.4s ease;
-        }
-
-        .orbital-frame:hover img {
-            filter: brightness(1.1) saturate(1.2);
         }
 
         .orbital-center {
@@ -1517,7 +1497,7 @@
         .icon-instagram { top: 20px; right: 25px; }
         .icon-facebook { bottom: 20px; right: 25px; }
         .icon-linkedin { bottom: 20px; left: 25px; }
-        .icon-phone { bottom: -30px; left: 50%; transform: translateX(-50%); }
+        .icon-github { bottom: -30px; left: 50%; transform: translateX(-50%); }
 
         .footer {
             background: linear-gradient(135deg, var(--footer-grad-1), var(--footer-grad-2));
@@ -1542,10 +1522,6 @@
 
         @media (max-width: 768px) {
             .extracurricular-container {
-                grid-template-columns: 1fr;
-            }
-
-            .orbital-content {
                 grid-template-columns: 1fr;
             }
 
@@ -1619,6 +1595,7 @@
         </div>
     </nav>
 
+    <!-- HERO SECTION: ONLY PROFILE PHOTO + ANIMATIONS UNTOUCHED -->
     <section id="home" class="hero">
         <div id="particles-js"></div>
         <div class="hero-content">
@@ -1629,6 +1606,7 @@
         </div>
     </section>
 
+    <!-- ABOUT SECTION: NO EXTRA PHOTO -->
     <section id="about" class="section" style="background: var(--section-bg-main);">
         <h2 class="section-title fade-in-up"><span class="glow-text">About Me</span></h2>
 
@@ -1655,9 +1633,8 @@
             </div>
         </div>
 
-        <div style="background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); border: 2px solid var(--accent); border-radius: 25px; padding: 2.5rem; margin: 3rem 0; position: relative; overflow: hidden;">
-            <img src="di1.jpg" alt="Jyothi" class="profile-photo">
-            <h3 style="color: var(--heading-main); margin-bottom: 1rem; margin-top: 1rem;">Professional Summary</h3>
+        <div style="background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); border: 2px solid var(--accent); border-radius: 25px; padding: 2.5rem; margin: 3rem 0; position: relative; overflow: hidden; text-align: center;">
+            <h3 style="color: var(--heading-main); margin-bottom: 1rem;">Professional Summary</h3>
             <p style="line-height: 2; color: var(--text-main);">🎯 Production ML Pipeline Engineer with hands-on expertise in building end-to-end ETL pipelines, advanced data engineering, and machine learning model deployment. Proven track record leading cross-functional teams and delivering large-scale data solutions handling 200K+ records with automated validation. Skilled in Python, SQL, Snowflake, data modeling, and AWS cloud infrastructure. Specialized in NLP/ML with transformers and feature engineering for production systems. F-1 STEM OPT eligible with 36 months of work authorization.</p>
         </div>
 
@@ -1965,13 +1942,16 @@
         </div>
     </section>
 
+    <!-- HOBBIES SECTION: IMAGE ON LEFT + ACTIVITIES ON RIGHT -->
     <section id="hobbies" class="extracurricular-section">
         <div class="extracurricular-container">
             <div class="extracurricular-photos fade-in-up">
-               
-               
+                <div class="photo-frame">
+                    <img src="Dj1.jpg" alt="Jyothi">
+                </div>
+            </div>
 
-               <div class="extracurricular-content fade-in-up">
+            <div class="extracurricular-content fade-in-up">
                 <h3>🎯 Passions Beyond Code</h3>
                 
                 <div class="activity-item">
@@ -2021,14 +2001,6 @@
                         <p>Social connector & experience collector</p>
                     </div>
                 </div>
-                 <div class="activity-item">
-                    <div class="activity-icon"><i class="fas fa-dog"></i></div>
-                    <div class="activity-info">
-                        <h4>Animal lover</h4>
-                        <p>love animals</p>
-                    </div>
-                </div>
-
 
                 <div class="activity-item">
                     <div class="activity-icon"><i class="fas fa-music"></i></div>
@@ -2065,51 +2037,61 @@
         </div>
     </section>
 
+    <!-- ORBITAL SECTION: CENTERED (NO IMAGE) + ALL 6 SOCIAL LINKS -->
     <section class="orbital-contact-section">
         <div class="orbital-background"></div>
 
-        
+        <div class="orbital-content">
+            <h2 style="color: var(--heading-main); margin-bottom: 3rem; font-size: 2rem; font-weight: 800;">Connect With Me</h2>
 
-            <div style="text-align: center; width: 100%;">
-                <h2 style="color: var(--heading-main); margin-bottom: 3rem; font-size: 2rem; font-weight: 800;">Connect With Me</h2>
+            <div class="orbital-container">
+                <div class="orbital-orbit orbit-1"></div>
+                <div class="orbital-orbit orbit-2"></div>
+                <div class="orbital-orbit orbit-3"></div>
 
-                <div class="orbital-container">
-                    <div class="orbital-orbit orbit-1"></div>
-                    <div class="orbital-orbit orbit-2"></div>
-                    <div class="orbital-orbit orbit-3"></div>
-
-                    <div class="orbital-center fade-in-up">
-                        <div class="center-profile-wrapper">
-                            <img src="Dj1.jpg" alt="Jyothi" class="orbital-profile-img">
-                            <div class="orbital-pulse-ring"></div>
-                        </div>
+                <!-- CENTER PROFILE: NO PHOTO AROUND IT -->
+                <div class="orbital-center fade-in-up">
+                    <div class="center-profile-wrapper">
+                        <img src="di1.jpg" alt="Jyothi" class="orbital-profile-img">
+                        <div class="orbital-pulse-ring"></div>
                     </div>
-
-                    <a href="mailto:swarupabburi0897@gmail.com" class="orbital-icon icon-email fade-in-up">
-                        <i class="fas fa-envelope"></i>
-                        <span class="orbital-tooltip">Email</span>
-                    </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener" class="orbital-icon icon-twitter fade-in-up">
-                        <i class="fab fa-twitter"></i>
-                        <span class="orbital-tooltip">Twitter</span>
-                    </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener" class="orbital-icon icon-instagram fade-in-up">
-                        <i class="fab fa-instagram"></i>
-                        <span class="orbital-tooltip">Instagram</span>
-                    </a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener" class="orbital-icon icon-facebook fade-in-up">
-                        <i class="fab fa-facebook"></i>
-                        <span class="orbital-tooltip">Facebook</span>
-                    </a>
-                    <a href="https://linkedin.com/in/swarup-abburi" target="_blank" rel="noopener" class="orbital-icon icon-linkedin fade-in-up">
-                        <i class="fab fa-linkedin"></i>
-                        <span class="orbital-tooltip">LinkedIn</span>
-                    </a>
-                    <a href="tel:+16363685657" class="orbital-icon icon-phone fade-in-up">
-                        <i class="fas fa-phone"></i>
-                        <span class="orbital-tooltip">Call</span>
-                    </a>
                 </div>
+
+                <!-- EMAIL -->
+                <a href="mailto:swarupabburi0897@gmail.com" class="orbital-icon icon-email fade-in-up">
+                    <i class="fas fa-envelope"></i>
+                    <span class="orbital-tooltip">Email</span>
+                </a>
+
+                <!-- TWITTER / X -->
+                <a href="https://x.com/swarupchowdary2" target="_blank" rel="noopener" class="orbital-icon icon-twitter fade-in-up">
+                    <i class="fab fa-x-twitter"></i>
+                    <span class="orbital-tooltip">X (Twitter)</span>
+                </a>
+
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/_swarup.chowdary__/?hl=en" target="_blank" rel="noopener" class="orbital-icon icon-instagram fade-in-up">
+                    <i class="fab fa-instagram"></i>
+                    <span class="orbital-tooltip">Instagram</span>
+                </a>
+
+                <!-- FACEBOOK -->
+                <a href="https://www.facebook.com/profile.php?id=61580911650681" target="_blank" rel="noopener" class="orbital-icon icon-facebook fade-in-up">
+                    <i class="fab fa-facebook"></i>
+                    <span class="orbital-tooltip">Facebook</span>
+                </a>
+
+                <!-- LINKEDIN -->
+                <a href="https://www.linkedin.com/in/swarup-abburi-b1a3a339a" target="_blank" rel="noopener" class="orbital-icon icon-linkedin fade-in-up">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="orbital-tooltip">LinkedIn</span>
+                </a>
+
+                <!-- GITHUB -->
+                <a href="https://github.com/swaroopsankar/" target="_blank" rel="noopener" class="orbital-icon icon-github fade-in-up">
+                    <i class="fab fa-github"></i>
+                    <span class="orbital-tooltip">GitHub</span>
+                </a>
             </div>
         </div>
     </section>
@@ -2278,7 +2260,6 @@
             currentTheme = (currentTheme + 1) % themes.length;
             document.documentElement.setAttribute('data-theme', themes[currentTheme]);
             localStorage.setItem('theme', themes[currentTheme]);
-            console.log('Theme: ' + themes[currentTheme]);
         }
 
         const savedTheme = localStorage.getItem('theme') || 'default';
