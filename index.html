@@ -380,11 +380,38 @@
             box-shadow: 0 10px 30px rgba(17,153,158,0.4);
             cursor: pointer;
             border: none;
+            animation: heroButtonPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes heroButtonPulse {
+            0%, 100% { box-shadow: 0 10px 30px rgba(17,153,158,0.4); }
+            50% { box-shadow: 0 15px 50px rgba(17,153,158,0.8); }
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(17,153,158,0.6);
+            animation: none;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        .scroll-indicator i {
+            font-size: 2rem;
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent);
         }
 
         .section {
@@ -822,6 +849,7 @@
             gap: 1rem;
             padding-top: 1.5rem;
             border-top: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 1.5rem;
         }
 
         .stat-mini {
@@ -849,6 +877,41 @@
             margin-top: 0.3rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .project-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--accent), var(--heading-main));
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(17,153,158,0.3);
+        }
+
+        .project-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(17,153,158,0.6);
+        }
+
+        .project-btn i {
+            font-size: 1rem;
         }
 
         .stat-card {
@@ -1242,6 +1305,14 @@
             background: white;
         }
 
+        .form-group input:valid {
+            border-color: #4caf50;
+        }
+
+        .form-group input:invalid {
+            border-color: #ff7043;
+        }
+
         .submit-btn {
             background: linear-gradient(135deg, var(--accent), var(--heading-main));
             color: white;
@@ -1553,6 +1624,15 @@
             .orbit-1 { width: 250px; height: 250px; }
             .orbit-2 { width: 320px; height: 320px; }
             .orbit-3 { width: 380px; height: 380px; }
+
+            .project-buttons {
+                flex-direction: column;
+            }
+
+            .project-btn {
+                width: 100%;
+                justify-content: center;
+            }
         }
 
         @keyframes fadeInUp {
@@ -1571,7 +1651,7 @@
         }
     </style>
 </head>
-<body data-theme="default">
+<body data-theme="midnight">
     <div id="pointer-light"></div>
     <div id="pointer-core"></div>
 
@@ -1595,7 +1675,7 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION: ONLY PROFILE PHOTO + ANIMATIONS UNTOUCHED -->
+    <!-- HERO SECTION WITH SCROLL INDICATOR & PARALLAX CTA -->
     <section id="home" class="hero">
         <div id="particles-js"></div>
         <div class="hero-content">
@@ -1603,6 +1683,9 @@
             <h1 class="fade-in-up">Jyothi Swarup Abburi</h1>
             <p class="fade-in-up">Results-driven data analytics graduate student with ML, NLP & analytics solutions</p>
             <a href="#projects" class="cta-button fade-in-up">View My Work</a>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
@@ -1779,7 +1862,7 @@
                 <div class="education-content">
                     <div class="education-degree">Master of Science</div>
                     <h3 class="education-title">Data Analytics</h3>
-                    <div class="education-period">Expected May 2025</div>
+                    <div class="education-period">May 2025</div>
                     <div class="education-details">
                         New Mexico State University, Las Cruces, NM. Capstone: Real-Time Movie Review Analysis using Sentiment Classification. Built ML system analyzing 10,000+ reviews, increasing sentiment accuracy by 18%.
                     </div>
@@ -1813,6 +1896,7 @@
         </div>
     </section>
 
+    <!-- PROJECTS WITH DEMO & GITHUB BUTTONS -->
     <section id="projects" class="section" style="background: var(--section-bg-accent);">
         <h2 class="section-title fade-in-up"><span class="glow-text">Featured Projects</span></h2>
         <div class="projects-grid">
@@ -1841,6 +1925,14 @@
                             <div class="stat-mini-value">92%</div>
                             <div class="stat-mini-label">Accuracy</div>
                         </div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/swaroopsankar/" target="_blank" class="project-btn">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="#contact" class="project-btn">
+                            <i class="fas fa-globe"></i> Live Demo
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1871,6 +1963,14 @@
                             <div class="stat-mini-label">Precision</div>
                         </div>
                     </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/swaroopsankar/" target="_blank" class="project-btn">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="#contact" class="project-btn">
+                            <i class="fas fa-globe"></i> Live Demo
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -1899,6 +1999,14 @@
                             <div class="stat-mini-value">99%</div>
                             <div class="stat-mini-label">Uptime</div>
                         </div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/swaroopsankar/" target="_blank" class="project-btn">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="#contact" class="project-btn">
+                            <i class="fas fa-globe"></i> Live Demo
+                        </a>
                     </div>
                 </div>
             </div>
@@ -2007,6 +2115,23 @@
                     <div class="activity-info">
                         <h4>Music Lover</h4>
                         <p>Eclectic taste & emotional expression</p>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon"><i class="fas fa-paw"></i></div>
+                    <div class="activity-info">
+                        <h4>Animal Lover</h4>
+                        <p>Compassion & caring nature enthusiast</p>
+                    </div>
+                 </div>
+                <div class="activity-item">
+                    <div class="activity-icon"><i class="fas fa-mountain"></i></div>
+                    <div class="activity-info">
+                         <h4>Trekking & Hiking</h4>
+                        <p>Endurance, exploration & love for the outdoors</p>
+    
+  
                     </div>
                 </div>
             </div>
@@ -2155,7 +2280,9 @@
                 hoveredElement.closest('.activity-item') ||
                 hoveredElement.classList.contains('submit-btn') ||
                 hoveredElement.classList.contains('advanced-skill-card') ||
-                hoveredElement.closest('.advanced-skill-card')
+                hoveredElement.closest('.advanced-skill-card') ||
+                hoveredElement.classList.contains('project-btn') ||
+                hoveredElement.closest('.project-btn')
             )) {
                 document.body.classList.add('pointer-active');
             } else {
@@ -2253,7 +2380,7 @@
             });
         }
 
-        const themes = ['default', 'sunset', 'ocean', 'forest', 'neon', 'cyberpunk', 'galaxy', 'aurora', 'ember', 'midnight'];
+        const themes = ['midnight', 'default', 'sunset', 'ocean', 'forest', 'neon', 'cyberpunk', 'galaxy', 'aurora', 'ember'];
         let currentTheme = 0;
 
         function toggleTheme() {
@@ -2262,7 +2389,7 @@
             localStorage.setItem('theme', themes[currentTheme]);
         }
 
-        const savedTheme = localStorage.getItem('theme') || 'default';
+        const savedTheme = localStorage.getItem('theme') || 'midnight';
         document.documentElement.setAttribute('data-theme', savedTheme);
         currentTheme = themes.indexOf(savedTheme);
 
